@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
 	{
 		_min = boundsChecking.bounds.min;
 		_max = boundsChecking.bounds.max;
-		//isFollowing = true;
+		isFollowing = true;
 	}
 	
 	// Update is called once per frame
@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
 			}
 			if(Mathf.Abs(y - player.position.y) > margin.y)
 			{
-				x = Mathf.Lerp (y, player.position.y, smoothing.y * Time.deltaTime);
+				y = Mathf.Lerp (y, player.position.y, smoothing.y * Time.deltaTime);
 			}
 		}
 
