@@ -38,7 +38,7 @@ public class CameraController : MonoBehaviour
 			}
 		}
 
-		var cameraHalfWidth = (GetComponent<Camera>().orthographicSize) * ((float)Screen.width / Screen.height);
+		var cameraHalfWidth = (GetComponent<Camera>().orthographicSize) * ((float)Screen.width/Screen.height);
 
 		x = Mathf.Clamp (x, _min.x + cameraHalfWidth, _max.x - cameraHalfWidth);
 		y = Mathf.Clamp (y, _min.y + (GetComponent<Camera>().orthographicSize), _max.y - (GetComponent<Camera>().orthographicSize));
