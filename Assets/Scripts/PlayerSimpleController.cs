@@ -41,7 +41,7 @@ public class PlayerSimpleController : MonoBehaviour
 
 		float move = Input.GetAxis("Horizontal");
 
-		//anim.SetFloat("Speed", Mathf.Abs(move));
+		anim.SetFloat("Speed", Mathf.Abs(move));
 
 		GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
